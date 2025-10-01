@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaskFlow Lite - Your client-side task management solution</title>
+  <link rel="stylesheet" href="styles/utilities.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="app-title">
+    <h1 id="app-title" class="app-title">TaskFlow Lite</h1>
+    <p class="tagline">Your client-side task management solution</p>
+
+    <form id="task-form" aria-label="Add new task">
+      <input
+        type="text"
+        id="task-input"
+        name="task"
+        placeholder="Add a new task..."
+        aria-describedby="task-input-error"
+        maxlength="100"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" aria-label="Add task">Add</button>
+      <div id="task-input-error" class="error-message" aria-live="polite"></div>
+    </form>
+
+    <section class="filters" role="region" aria-label="Task filters">
+      <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-filter="active" aria-pressed="false">Active</button>
+      <button type="button" class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+    </section>
+
+    <section aria-live="polite" aria-atomic="true" class="task-counter" id="task-counter">
+      0 tasks total
+    </section>
+
+    <ul id="task-list" class="task-list" tabindex="0" aria-label="Task list"></ul>
+
+    <section class="theme-toggle">
+      <label for="theme-switch">Dark Mode</label>
+      <input type="checkbox" id="theme-switch" aria-checked="false" role="switch" />
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
