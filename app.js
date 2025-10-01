@@ -1,7 +1,7 @@
 // app.js
-import { loadTasks, saveTasks } from './modules/storage.js';
-import { renderTaskList, renderTaskCounter } from './modules/render.js';
-import { validateTaskInput } from './modules/validation.js';
+import { loadTasks, saveTasks } from './storage.js';
+import { renderTaskList, renderTaskCounter } from './render.js';
+import { validateTaskInput } from './validation.js';
 
 let tasks = loadTasks();
 let filteredTasks = [...tasks];
@@ -241,3 +241,4 @@ function init() {
 }
 
 init();
+
